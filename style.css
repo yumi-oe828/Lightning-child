@@ -1,0 +1,23 @@
+/*
+Theme Name: Lightning Child
+Template: lightning
+*/
+.section_title {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  line-height: 1; 
+}
+
+.section_title-en {
+  display: inline-block;
+  font-size: 32px;
+}
+
+.section_title-ja {
+  display: inline-block;
+  font-size: 14px;
+}
