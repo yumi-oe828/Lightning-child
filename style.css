@@ -2,14 +2,35 @@
 Theme Name: Lightning Child
 Template: lightning
 */
-.section_title {
-  margin-bottom: 20px;
+
+/* メインビジュアル */
+.section_mv__visual {
+  display: flex;
+  padding-bottom: 40px;
+  min-height: clamp(500px, 70vh, 800px);
+}
+
+.section_mv__wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.section_mv__text {
+  color: #222;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: clamp(24px, 5vw, 48px);
+  line-height: 1.2;
+}
+
+/* 共通タイトル */
+.section_title {
   display: flex;
   align-items: center;
   gap: 20px;
-  line-height: 1; 
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 1;
 }
 
 .section_title-en {
