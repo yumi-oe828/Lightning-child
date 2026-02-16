@@ -6,7 +6,9 @@ Template: lightning
 /* メインビジュアル */
 .section_mv__visual {
   display: flex;
-  padding-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: clamp(30px, 6vw, 40px);
   min-height: clamp(500px, 70vh, 800px);
 }
 
@@ -16,6 +18,9 @@ Template: lightning
 }
 
 .section_mv__text {
+  margin: 0 auto;
+  margin-bottom: 80px;
+  max-width: 600px;
   color: #222;
   font-weight: bold;
   font-size: clamp(24px, 5vw, 48px);
@@ -41,4 +46,43 @@ Template: lightning
 .section_title-ja {
   display: inline-block;
   font-size: 14px;
+}
+
+/* 共通ボタン */
+.c-btn {
+  display: inline-flex;
+}
+
+.c-btn .wp-block-button__link {
+  display: inline-block;
+  padding: 10px 20px;
+  width: auto;
+  border-radius: 4px;
+  background-color: #555;
+  color: #fff;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.c-btn .wp-block-button__link:hover {
+  background-color: #999;
+  transform: translateY(-2px);
+}
+
+.c-btn .wp-block-button__link:after {
+  content: '→';
+  margin-left: 8px;
+  transition: .3s;
+}
+
+.c-btn .wp-block-button__link:hover:after {
+  transform: translateX(4px);
+}
+
+/* about */
+.section_about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 80px;
 }
