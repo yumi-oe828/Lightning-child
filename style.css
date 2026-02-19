@@ -181,10 +181,26 @@ Template: lightning
 }
 
 /* Works */
-.works__swiper img {
-  display: block;
-  width: 100%;
-  border-radius: 6px;
+.works__swiper {
+  overflow: visible;
+}
+
+.works__swiper .swiper-wrapper {
+  align-items: center;
+}
+
+/* デフォルト（左右） */
+.works__swiper .swiper-slide {
+  width: 460px;
+  opacity: .5;
+  transition: all .4s;
+  transform: scale(.75);
+}
+
+.works__swiper .swiper-slide-active {
+  z-index: 10;
+  opacity: 1;
+  transform: scale(1.15);
 }
 
 /* footer */
