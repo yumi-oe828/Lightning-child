@@ -22,3 +22,34 @@ function fix_svg_display() {
   </style>';
 }
 add_action('admin_head', 'fix_svg_display');
+
+
+// SwiperのCSSとJSを読み込む
+function my_swiper() {
+
+wp_enqueue_style(
+'swiper-css',
+'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'
+);
+
+wp_enqueue_script(
+'swiper-js',
+'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+array(),
+null,
+true
+);
+
+// 自作JSの読み込み
+wp_enqueue_script(
+'works-swiper-js',
+get_stylesheet_directory_uri() . '/js/works-swiper.js',
+array('swiper-js'),
+null,
+true
+);
+
+}
+add_action('wp_enqueue_scripts', 'my_swiper');
+
+

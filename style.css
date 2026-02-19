@@ -89,6 +89,16 @@ Template: lightning
   line-height: 1.2;
 }
 
+/* 共通幅 */
+.l-container {
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  max-width: 1200px;
+}
+
+
+
 /* 共通タイトル */
 .section_title {
   display: flex;
@@ -110,7 +120,22 @@ Template: lightning
   font-size: 14px;
 }
 
-/* 共通ボタン */
+
+/* =========================
+   Lightningボタンのデフォルトをリセット
+========================= */
+
+.c-btn .wp-block-button__link {
+  border: none;
+  background: none;
+  box-shadow: none;
+  color: inherit;
+}
+
+/* =========================
+   オリジナルボタン
+========================= */
+
 .c-btn {
   display: inline-flex;
 }
@@ -121,23 +146,29 @@ Template: lightning
   width: auto;
   border-radius: 4px;
   background-color: #555;
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
   transition: .3s;
 }
+
+
+/* hover */
 
 .c-btn .wp-block-button__link:hover {
   background-color: #999;
   transform: translateY(-2px);
 }
 
-.c-btn .wp-block-button__link:after {
+/* 矢印 */
+
+.c-btn .wp-block-button__link::after {
   content: '→';
   margin-left: 8px;
   transition: .3s;
 }
 
-.c-btn .wp-block-button__link:hover:after {
+
+.c-btn .wp-block-button__link:hover::after {
   transform: translateX(4px);
 }
 
@@ -149,56 +180,64 @@ Template: lightning
   margin-bottom: 80px;
 }
 
+/* Works */
+.works__swiper img {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+}
+
 /* footer */
-
-/* .footer-nav {
-  border-bottom: none;
-}
-
-.footer-nav ul {
-  display: flex;
-  gap: 18px;
-  padding: 0;
-  list-style: none;
-}
-
-.footer-nav ul li {
-  padding: 0;
-}
-
+/* フッター全体を消す */
 .site-footer {
+  display: none !important;
+}
+
+/* コピーライト部分 */
+.site-footer-copyright {
+  display: none !important;
+}
+
+/* powered by WordPress 部分 */
+.site-footer .copySection {
+  display: none !important;
+}
+
+/* ここからカスタマイズしたfooterのコード */
+.footer {
   padding: 20px 40px;
-  background-color: #fff;
+  background: #e6e6e6;
 }
 
 .site-footer .container {
+  max-width: 100% !important;
+}
+
+.footer-image {
+  width: 180px;
+}
+
+.footer-image img {
+  display: block;
+  max-width: none;
+  width: 100%;
+  height: 40px;
+}
+
+.footer-inner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin: 0 auto;
-  padding-right: 0;
-  padding-left: 0;
   max-width: 1200px;
+  width: 100%;
 }
 
-.navbar-footer {
-  margin-right: auto;
+.footer-nav {
+  border-bottom: none;
 }
 
-.site-footer_logo img {
-  max-height: 60px;
-  width: auto;
+.footer-nav-list {
+  display: flex;
+  list-style: none;
 }
-
-.global-nav {
-  margin-left: auto;
-}
-
-.global-nav-list {
-  gap: 18px;
-}
-
-.global-nav-list li a {
-  letter-spacing: .05em;
-  font-weight: 500;
-  font-size: 14px;
-} */
